@@ -48,7 +48,7 @@ button {
     background-color: black;
     border-radius: 5px ;
 }
-.buttons > .itemAdd{
+.buttons > #itemAdd{
     grid-column: 4;
     grid-row: 3/5;
 }
