@@ -63,11 +63,50 @@
 //     }
 //}
 
-const output= document.querySelector("#display");
+const output = document.querySelector("#display");
+
 const value = document.querySelector(".click1");
-value.addEventListener("click",()=>{
-  console.log("one");
-  document.querySelector("#display").value = "1";
+value.addEventListener("click", (e) => {
+    console.log("one");
+    output.style.color = "white";
+    output.style.fontSize = "40px";
+    output.value += e.target.innerText;
 })
+
+const value2 = document.querySelector(".click2");
+value2.addEventListener("click", (e) => {
+    console.log("two");
+    output.style.color = "white";
+    output.style.fontSize = "40px";
+    output.value+="2";
+})
+
+const value3 = document.querySelector(".click3");
+value3.addEventListener("click", (e) => {
+    console.log("three");
+    // output.style.color = "white";
+    // output.style.fontSize = "40px";
+    output.value+="3";
+})
+
+const del= document.querySelector(".clickC");
+del.addEventListener("click",(e)=>{
+    console.log("Delete");
+    output.value="";
+})
+
+const zero= document.querySelector(".click0");
+zero.addEventListener("click",(e)=>{
+    console.log("zero");
+    output.value+="0";
+})
+
+// const buttons = document.querySelectorAll("button");
+
+// buttons.forEach(btn => {
+//   btn.addEventListener("click", (e) => {
+//     dis.value += e.target.innerText; 
+//   });
+// });
 
 
