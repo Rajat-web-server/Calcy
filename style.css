@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: #1E1E1E;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,40 +19,47 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(255, 255, 255);
+    /* border: 2px solid rgb(255, 255, 255); */
     padding: 15px;
     gap: 15px;
-    border-radius: 20px;
-
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0 ), -5px -5px 5px rgb(58, 56, 56);
 }
 
 button {
     font-size: 40px;
     padding: 15px;
     border-radius: 10px;
-    background-color: black;
+    background-color: #252525;
     color: wheat;
-    border: 2px solid white;
+    /* border: 2px solid white; */
+    border: none;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0),-5px -5px 5px rgb(58, 56, 56);
 }
 
 .buttons {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
-    gap: 10px;
+    gap: 15px;
+    /* box-shadow: 5px 5px 5px grey; */
 }
 
 #display {
-    width: 425px;
+    width: 450px;
     height: 60px;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: black;
-    border-radius: 5px ;
+    /* border: 2px solid rgb(255, 255, 255); */
+    background-color: #1E1E1E;
+    border-radius: 10px ;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0),-5px -5px 5px rgb(58, 56, 56);
+    text-shadow:5px 5px 5px rgb(0, 0, 0) ;
+    text-align: right;
+  padding: 10px;
 }
 .buttons > #itemAdd{
     grid-column: 4;
     grid-row: 3/5;
 }
-#display {
-  text-align: right;
-  padding-right: 15px;
-}
+
+

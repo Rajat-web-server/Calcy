@@ -1,72 +1,14 @@
-// let a, b;
 
-// function num1() {
-//     a = 
-//     return a;
-// }
-// function num2() {
-//     b = 
-//     return b;
-// }
-
-// function operator() {
-    
-// }
-
-// function addition() {
-//     let c;
-//     c = a + b;
-//     console.log("The result is " + c)
-// }
-
-
-// function subtraction() {
-//     let c;
-//     c = a - b;
-//     console.log("The result is " + c);
-// }
-
-// function multiplication() {
-//     let c;
-//     c = a * b;
-//     console.log("The result is " + c);
-// }
-
-// function divide() {
-//     let c;
-//     c = a / b;
-//     console.log("The result is " + c);
-// }
-
-// function calculate() {
-//     switch (operator()) {
-//         case "+":
-//             addition();
-//             break;
-
-//         case "-":
-//             subtraction();
-//             break;
-
-//         case "*":
-//             multiplication();
-//             break;
-
-//         case "/":
-//             divide();
-//             break;
-
-//         default:
-//             console.log(error);
-
-//     }
-// }
 // const buttons = document.querySelectorAll("button");
 
 // buttons.forEach(btn => {
 //   btn.addEventListener("click", (e) => {
 //     dis.value += e.target.innerText; 
 //   });
+// });
+
+// window.addEventListener("load", () => {
+//     output.value = "";      // to stop the autcomplete value
 // });
 const output = document.querySelector("#display");
 
@@ -206,9 +148,81 @@ operationMinus.addEventListener("click", (e) => {
     output.value += " − ";
 })
 
-window.addEventListener("load", () => {
-    output.value = "";
-});
+// const operationSign= document.querySelector(".sign");
+// operationSign.addEventListener("click",(e)=>{
+//     if (output.value=" - ") {
+//         output.value =" + ";
+//     }
+//     else if(output.value=" + "){
+//         output.value=" - ";
+//     }
+// })
+
+const operationEqual = document.querySelector(".equal").addEventListener("click",(e)=>{
+    // let a, b;
+
+// function num1() {
+//     a = 
+//     return a;
+// }
+// function num2() {
+//     b = 
+//     return b;
+// }
+
+// function operator() {
+    
+// }
+
+// function addition() {
+//     let c;
+//     c = a + b;
+//     console.log("The result is " + c)
+// }
+
+
+// function subtraction() {
+//     let c;
+//     c = a - b;
+//     console.log("The result is " + c);
+// }
+
+// function multiplication() {
+//     let c;
+//     c = a * b;
+//     console.log("The result is " + c);
+// }
+
+// function divide() {
+//     let c;
+//     c = a / b;
+//     console.log("The result is " + c);
+// }
+
+// function calculate() {
+//     switch (operator()) {
+//         case "+":
+//             addition();
+//             break;
+
+//         case "-":
+//             subtraction();
+//             break;
+
+//         case "*":
+//             multiplication();
+//             break;
+
+//         case "/":
+//             divide();
+//             break;
+
+//         default:
+//             console.log(error);
+
+//     }
+// }
+})
 
 
 
