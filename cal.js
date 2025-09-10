@@ -224,6 +224,16 @@ const operationEqual = document.querySelector(".equal").addEventListener("click"
 // }
 })
 
+const sound=document.querySelector("#mouseClick");
+const buttons=document.querySelectorAll("#btn");
+
+buttons.forEach(button=>{
+    button.addEventListener("click",()=>{
+        mouseClick.currentTime=0;
+        mouseClick.play()
+    })
+})
+
 
 
 
