@@ -13,11 +13,30 @@
 const output = document.querySelector("#display");
 
 const value = document.querySelector(".click1");
+
+let n1, operation, result;
+const sound = document.querySelector("#mouseClick");
+const buttons = document.querySelectorAll("#btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        mouseClick.currentTime = 0;
+        mouseClick.play()
+    })
+})
+
+const addSound = document.querySelector("#itemAdd").addEventListener('click', () => {
+    mouseClick.currentTime = 0;
+    mouseClick.play();
+})
+
+
 value.addEventListener("click", (e) => {
     console.log("one");
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += e.target.innerText;
+    n1=1;
 })
 
 const value2 = document.querySelector(".click2");
@@ -26,6 +45,7 @@ value2.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "2";
+    n1=2;
 })
 
 const value3 = document.querySelector(".click3");
@@ -34,6 +54,7 @@ value3.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "3";
+    n1=3;
 })
 
 const del = document.querySelector(".clickC");
@@ -42,6 +63,7 @@ del.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value = "";
+    
 })
 
 const zero = document.querySelector(".click0");
@@ -50,6 +72,7 @@ zero.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "0";
+    n=0;
 })
 
 const value4 = document.querySelector(".click4");
@@ -58,6 +81,7 @@ value4.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "4";
+    n=4;
 })
 
 const value5 = document.querySelector(".click5");
@@ -66,6 +90,7 @@ value5.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "5";
+    n=5;
 })
 
 const value6 = document.querySelector(".click6");
@@ -74,6 +99,7 @@ value6.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "6";
+    n=6;
 })
 
 const value7 = document.querySelector(".click7");
@@ -82,6 +108,7 @@ value7.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "7";
+    n=7;
 })
 
 const value8 = document.querySelector(".click8");
@@ -90,6 +117,7 @@ value8.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "8";
+    n=8;
 })
 
 const value9 = document.querySelector(".click9");
@@ -98,6 +126,7 @@ value9.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += "9";
+    n=9;
 })
 
 const valuedot = document.querySelector(".dot");
@@ -114,6 +143,8 @@ operationPlus.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += " + ";
+    operation=output.value;
+    operation="+";
 })
 
 const operationMultiply = document.querySelector(".multiply");
@@ -122,6 +153,8 @@ operationMultiply.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += " x ";
+    operation="x";
+
 })
 
 const operationDivide = document.querySelector(".divide");
@@ -130,6 +163,7 @@ operationDivide.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += " ÷ ";
+    operation="÷";
 })
 
 const operationPercent = document.querySelector(".percent");
@@ -138,6 +172,7 @@ operationPercent.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += " % ";
+    operation="%";
 })
 
 const operationMinus = document.querySelector(".minus");
@@ -146,6 +181,7 @@ operationMinus.addEventListener("click", (e) => {
     output.style.color = "white";
     output.style.fontSize = "40px";
     output.value += " − ";
+    operation="-";
 })
 
 // const operationSign= document.querySelector(".sign");
@@ -158,81 +194,60 @@ operationMinus.addEventListener("click", (e) => {
 //     }
 // })
 
-const operationEqual = document.querySelector(".equal").addEventListener("click",(e)=>{
-    // let a, b;
-
-// function num1() {
-//     a = 
-//     return a;
-// }
-// function num2() {
-//     b = 
-//     return b;
-// }
-
-// function operator() {
-    
-// }
-
-// function addition() {
-//     let c;
-//     c = a + b;
-//     console.log("The result is " + c)
-// }
+function add(){
+    if(operation=="+"){
+        n1+=n1+n1;
+        n1=result;
+        console.log(result)
+    }
+};
 
 
-// function subtraction() {
-//     let c;
-//     c = a - b;
-//     console.log("The result is " + c);
-// }
 
-// function multiplication() {
-//     let c;
-//     c = a * b;
-//     console.log("The result is " + c);
-// }
+    // function subtraction() {
+    //     let c;
+    //     c = a - b;
+    //     console.log("The result is " + c);
+    // }
 
-// function divide() {
-//     let c;
-//     c = a / b;
-//     console.log("The result is " + c);
-// }
+    // function multiplication() {
+    //     let c;
+    //     c = a * b;
+    //     console.log("The result is " + c);
+    // }
 
-// function calculate() {
-//     switch (operator()) {
-//         case "+":
-//             addition();
-//             break;
+    // function divide() {
+    //     let c;
+    //     c = a / b;
+    //     console.log("The result is " + c);
+    // }
 
-//         case "-":
-//             subtraction();
-//             break;
+    // function calculate() {
+    //     switch (operator()) {
+    //         case "+":
+    //             addition();
+    //             break;
 
-//         case "*":
-//             multiplication();
-//             break;
+    //         case "-":
+    //             subtraction();
+    //             break;
 
-//         case "/":
-//             divide();
-//             break;
+    //         case "*":
+    //             multiplication();
+    //             break;
 
-//         default:
-//             console.log(error);
+    //         case "/":
+    //             divide();
+    //             break;
 
-//     }
-// }
-})
+    //         default:
+    //             console.log(error);
 
-const sound=document.querySelector("#mouseClick");
-const buttons=document.querySelectorAll("#btn");
+    //     }
+    // }
 
-buttons.forEach(button=>{
-    button.addEventListener("click",()=>{
-        mouseClick.currentTime=0;
-        mouseClick.play()
-    })
-})
+
+
 
 
 
