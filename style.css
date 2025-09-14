@@ -23,7 +23,7 @@ body {
     padding: 15px;
     gap: 15px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0 ), -5px -5px 5px rgb(58, 56, 56);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(58, 56, 56);
 }
 
 button {
@@ -34,7 +34,7 @@ button {
     color: wheat;
     /* border: 2px solid white; */
     border: none;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0),-5px -5px 5px rgb(58, 56, 56);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(58, 56, 56);
 }
 
 .buttons {
@@ -48,18 +48,19 @@ button {
     width: 450px;
     height: 60px;
     /* border: 2px solid rgb(255, 255, 255); */
-    background-color: #1E1E1E;
-    border-radius: 10px ;
+    background-color: #c6c6c6;
+    border-radius: 10px;
     outline: none;
     border: none;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0),-5px -5px 5px rgb(58, 56, 56);
-    text-shadow:5px 5px 5px rgb(0, 0, 0) ;
+    box-shadow: 5px 5px 5px rgb(58, 56, 56), -5px -5px 5px rgb(58, 56, 56);
+    /* text-shadow: 5px 5px 5px rgb(0, 0, 0); */
     text-align: right;
-  padding: 10px;
+    font-weight: bolder;
+    padding: 10px;
+    color: #252525;
 }
-.buttons > #itemAdd{
+
+.buttons>#itemAdd {
     grid-column: 4;
     grid-row: 3/5;
 }
-
-

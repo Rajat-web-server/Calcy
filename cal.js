@@ -13,8 +13,9 @@
 const output = document.querySelector("#display");
 
 const value = document.querySelector(".click1");
+let n1,n2, operation, result;
 
-let n1, operation, result;
+
 const sound = document.querySelector("#mouseClick");
 const buttons = document.querySelectorAll("#btn");
 
@@ -24,7 +25,8 @@ buttons.forEach(button => {
         mouseClick.play()
     })
 })
-
+// const clickSound = new Audio('click.mp3');  
+// clickSound.preload = 'auto'; 
 const addSound = document.querySelector("#itemAdd").addEventListener('click', () => {
     mouseClick.currentTime = 0;
     mouseClick.play();
@@ -33,34 +35,34 @@ const addSound = document.querySelector("#itemAdd").addEventListener('click', ()
 
 value.addEventListener("click", (e) => {
     console.log("one");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += e.target.innerText;
-    n1=1;
+    // n1=1;
 })
 
 const value2 = document.querySelector(".click2");
 value2.addEventListener("click", (e) => {
     console.log("two");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "2";
-    n1=2;
+    // n1=2;
 })
 
 const value3 = document.querySelector(".click3");
 value3.addEventListener("click", (e) => {
     console.log("three");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "3";
-    n1=3;
+    // n1=3;
 })
 
 const del = document.querySelector(".clickC");
 del.addEventListener("click", (e) => {
     console.log("Delete");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value = "";
     
@@ -69,70 +71,70 @@ del.addEventListener("click", (e) => {
 const zero = document.querySelector(".click0");
 zero.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "0";
-    n=0;
+    // n=0;
 })
 
 const value4 = document.querySelector(".click4");
 value4.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "4";
-    n=4;
+    // n=4;
 })
 
 const value5 = document.querySelector(".click5");
 value5.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "5";
-    n=5;
+    // n=5;
 })
 
 const value6 = document.querySelector(".click6");
 value6.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "6";
-    n=6;
+    // n=6;
 })
 
 const value7 = document.querySelector(".click7");
 value7.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "7";
-    n=7;
+    // n=7;
 })
 
 const value8 = document.querySelector(".click8");
 value8.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "8";
-    n=8;
+    // n=8;
 })
 
 const value9 = document.querySelector(".click9");
 value9.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += "9";
-    n=9;
+    // n=9;
 })
 
 const valuedot = document.querySelector(".dot");
 valuedot.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += ".";
 })
@@ -140,48 +142,48 @@ valuedot.addEventListener("click", (e) => {
 const operationPlus = document.querySelector(".add");
 operationPlus.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += " + ";
     operation=output.value;
-    operation="+";
+    // operation="+";
 })
 
 const operationMultiply = document.querySelector(".multiply");
 operationMultiply.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += " x ";
-    operation="x";
+    // operation="x";
 
 })
 
 const operationDivide = document.querySelector(".divide");
 operationDivide.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += " ÷ ";
-    operation="÷";
+    // operation="÷";
 })
 
 const operationPercent = document.querySelector(".percent");
 operationPercent.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += " % ";
-    operation="%";
+    // operation="%";
 })
 
 const operationMinus = document.querySelector(".minus");
 operationMinus.addEventListener("click", (e) => {
     console.log("zero");
-    output.style.color = "white";
+    output.style.color = "black";
     output.style.fontSize = "40px";
     output.value += " − ";
-    operation="-";
+    // operation="-";
 })
 
 // const operationSign= document.querySelector(".sign");
@@ -193,66 +195,22 @@ operationMinus.addEventListener("click", (e) => {
 //         output.value=" - ";
 //     }
 // })
+  
 
-function add(){
-    if(operation=="+"){
-        n1+=n1+n1;
-        n1=result;
-        console.log(result)
+function numberClicked(num){
+    if (operation===""){
+        n1=num;
+        console.log(n1);
     }
-};
+    else {
+        n2=num;
+        console.log(n2);
+    }
+}
 
-
-
-    // function subtraction() {
-    //     let c;
-    //     c = a - b;
-    //     console.log("The result is " + c);
-    // }
-
-    // function multiplication() {
-    //     let c;
-    //     c = a * b;
-    //     console.log("The result is " + c);
-    // }
-
-    // function divide() {
-    //     let c;
-    //     c = a / b;
-    //     console.log("The result is " + c);
-    // }
-
-    // function calculate() {
-    //     switch (operator()) {
-    //         case "+":
-    //             addition();
-    //             break;
-
-    //         case "-":
-    //             subtraction();
-    //             break;
-
-    //         case "*":
-    //             multiplication();
-    //             break;
-
-    //         case "/":
-    //             divide();
-    //             break;
-
-    //         default:
-    //             console.log(error);
-
-    //     }
-    // }
-
-
-
-
-
-
-
-
+ function calculate(){
+    console.log("n1: "+n1+" "+"n2: "+n2+" "+"operator: "+operation);
+ }
 
 
 
