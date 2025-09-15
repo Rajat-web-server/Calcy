@@ -14,8 +14,8 @@ const output = document.querySelector("#display");
 
 const value = document.querySelector(".click1");
 
-let n1 ;
-let n2 ;
+let n1;
+let n2;
 let operation;
 let result = null;
 let isSecondNumber = false;
@@ -67,10 +67,14 @@ value3.addEventListener("click", (e) => {
 const del = document.querySelector(".clickC");
 del.addEventListener("click", (e) => {
     console.log("Delete");
+    n1='';
+    n2='';
+    result='';
+    operation='';
     output.style.color = "black";
     output.style.fontSize = "40px";
     output.value = "";
-    
+
 })
 
 const zero = document.querySelector(".click0");
@@ -150,7 +154,7 @@ operationPlus.addEventListener("click", (e) => {
     output.style.color = "black";
     output.style.fontSize = "40px";
     // output.value += " + ";
-    operation="+";
+    operation = "+";
     // operation="+";
 })
 
@@ -160,7 +164,7 @@ operationMultiply.addEventListener("click", (e) => {
     output.style.color = "black";
     output.style.fontSize = "40px";
     // output.value += " x ";
-    operation="x";
+    operation = "x";
 
 })
 
@@ -170,7 +174,7 @@ operationDivide.addEventListener("click", (e) => {
     output.style.color = "black";
     output.style.fontSize = "40px";
     // output.value += " ÷ ";
-    operation="÷";
+    operation = "÷";
 })
 
 const operationPercent = document.querySelector(".percent");
@@ -179,7 +183,7 @@ operationPercent.addEventListener("click", (e) => {
     output.style.color = "black";
     output.style.fontSize = "40px";
     // output.value += " % ";
-    operation="%";
+    operation = "%";
 })
 
 const operationMinus = document.querySelector(".minus");
@@ -188,7 +192,7 @@ operationMinus.addEventListener("click", (e) => {
     output.style.color = "black";
     output.style.fontSize = "40px";
     // output.value += " − ";
-    operation="-";
+    operation = "-";
 })
 
 // const operationSign= document.querySelector(".sign");
@@ -200,44 +204,88 @@ operationMinus.addEventListener("click", (e) => {
 //         output.value=" - ";
 //     }
 // })
-  
 
-function gettingFirstnum(){
-    if(!operation){
-        n1=output.value;
-        console.log("n1: "+ n1);
-        output.value='';  
+
+function gettingFirstnum() {
+    if (!operation) {
+        n1 = output.value;
+        console.log("n1: " + n1);
+        output.value = '';
     }
 }
-function gettingSecondnum(){
-    if(operation){
-        n2=output.value;
-        console.log("n2: "+ n2);
+function gettingSecondnum() {
+    if (operation) {
+        n2 = output.value;
+        console.log("n2: " + n2 + " " + "operation: " + operation);
+        output.value = '';
+
+        switch (operation) {
+        case '+':
+            result = Number(n1) + Number(n2);
+            console.log(result);
+            output.value=result;
+            break;
+
+        case '-':
+            result = Number(n1) - Number(n2);
+            console.log(result);
+            output.value=result;
+            break;
+
+        case 'x': // or '*'
+            result = Number(n1) * Number(n2);
+            console.log(result);
+            output.value=result;
+            break;
+
+        case '÷': // or '/'
+            result = Number(n1) / Number(n2);
+            console.log(result);
+            output.value=result;
+            break;
+
+        case '%':
+            result = Number(n1) % Number(n2);
+            console.log(result);
+            output.value=result;
+            break;
+
+        default:
+            console.log("Unknown operation");
+    }
     }
 }
-switch (operation) {
-  case '+':
-    result = Number(n1) + Number(n2);
-    break;
+function calculate() {
+    switch (operation) {
+        case '+':
+            result = Number(n1) + Number(n2);
+            console.log(result);
+            break;
 
-  case '-':
-    result = Number(n1) - Number(n2);
-    break;
+        case '-':
+            result = Number(n1) - Number(n2);
+            console.log(result);
+            break;
 
-  case 'x': // or '*'
-    result = Number(n1) * Number(n2);
-    break;
+        case 'x': // or '*'
+            result = Number(n1) * Number(n2);
+            console.log(result);
+            break;
 
-  case '÷': // or '/'
-    result = Number(n1) / Number(n2);
-    break;
+        case '÷': // or '/'
+            result = Number(n1) / Number(n2);
+            console.log(result);
+            break;
 
-  case '%':
-    result = Number(n1) % Number(n2);
-    break;
+        case '%':
+            result = Number(n1) % Number(n2);
+            console.log(result);
+            break;
 
-  default:
-    console.log("Unknown operation");
+        default:
+            console.log("Unknown operation");
+    }
+
 }
 
 
