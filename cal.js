@@ -13,7 +13,12 @@
 const output = document.querySelector("#display");
 
 const value = document.querySelector(".click1");
-let n1,n2, operation, result;
+
+let n1 ;
+let n2 ;
+let operation;
+let result = null;
+let isSecondNumber = false;
 
 
 const sound = document.querySelector("#mouseClick");
@@ -144,8 +149,8 @@ operationPlus.addEventListener("click", (e) => {
     console.log("zero");
     output.style.color = "black";
     output.style.fontSize = "40px";
-    output.value += " + ";
-    operation=output.value;
+    // output.value += " + ";
+    operation="+";
     // operation="+";
 })
 
@@ -154,8 +159,8 @@ operationMultiply.addEventListener("click", (e) => {
     console.log("zero");
     output.style.color = "black";
     output.style.fontSize = "40px";
-    output.value += " x ";
-    // operation="x";
+    // output.value += " x ";
+    operation="x";
 
 })
 
@@ -164,8 +169,8 @@ operationDivide.addEventListener("click", (e) => {
     console.log("zero");
     output.style.color = "black";
     output.style.fontSize = "40px";
-    output.value += " ÷ ";
-    // operation="÷";
+    // output.value += " ÷ ";
+    operation="÷";
 })
 
 const operationPercent = document.querySelector(".percent");
@@ -173,8 +178,8 @@ operationPercent.addEventListener("click", (e) => {
     console.log("zero");
     output.style.color = "black";
     output.style.fontSize = "40px";
-    output.value += " % ";
-    // operation="%";
+    // output.value += " % ";
+    operation="%";
 })
 
 const operationMinus = document.querySelector(".minus");
@@ -182,8 +187,8 @@ operationMinus.addEventListener("click", (e) => {
     console.log("zero");
     output.style.color = "black";
     output.style.fontSize = "40px";
-    output.value += " − ";
-    // operation="-";
+    // output.value += " − ";
+    operation="-";
 })
 
 // const operationSign= document.querySelector(".sign");
@@ -197,20 +202,44 @@ operationMinus.addEventListener("click", (e) => {
 // })
   
 
-function numberClicked(num){
-    if (operation===""){
-        n1=num;
-        console.log(n1);
-    }
-    else {
-        n2=num;
-        console.log(n2);
+function gettingFirstnum(){
+    if(!operation){
+        n1=output.value;
+        console.log("n1: "+ n1);
+        output.value='';  
     }
 }
+function gettingSecondnum(){
+    if(operation){
+        n2=output.value;
+        console.log("n2: "+ n2);
+    }
+}
+switch (operation) {
+  case '+':
+    result = Number(n1) + Number(n2);
+    break;
 
- function calculate(){
-    console.log("n1: "+n1+" "+"n2: "+n2+" "+"operator: "+operation);
- }
+  case '-':
+    result = Number(n1) - Number(n2);
+    break;
+
+  case 'x': // or '*'
+    result = Number(n1) * Number(n2);
+    break;
+
+  case '÷': // or '/'
+    result = Number(n1) / Number(n2);
+    break;
+
+  case '%':
+    result = Number(n1) % Number(n2);
+    break;
+
+  default:
+    console.log("Unknown operation");
+}
+
 
 
 
